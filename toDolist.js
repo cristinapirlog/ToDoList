@@ -24,13 +24,13 @@ function newTask() {
 
 function Delete() {
     let numberOfRows =  document.getElementById("myTable").rows.length;
-    let delValue = document.getElementById("rowDelete").value;
+    let delValue = document.getElementById("rowDel").value;
 
     if(delValue > numberOfRows) {
         alert("This row doesn't exist!")
     }
     document.getElementById("myTable").deleteRow(delValue-1);
-    document.getElementById("rowDelete").value = " ";
+    document.getElementById("rowDel").value = " ";
 
 
     let counter = myTable.rows.length -1;
