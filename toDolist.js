@@ -17,6 +17,10 @@ function newTask() {
     
     document.getElementById("myInput").value = "";
     document.getElementById("numberOfTask").value = "";
+    
+    let counter = myTable.rows.length -1;
+    document.getElementById("totalNumberOfTasks").innerHTML = counter;
+    
 }
 
 function Delete() {
@@ -27,6 +31,11 @@ function Delete() {
         alert("This row doesn't exist!")
     }
     document.getElementById("myTable").deleteRow(delValue-1);
+    document.getElementById("rowDelete").value = " ";
+
+
+    let counter = myTable.rows.length -1;
+    document.getElementById("totalNumberOfTasks").innerHTML = counter;
 }
 
 let mouseBold = document.getElementById("myTable");
