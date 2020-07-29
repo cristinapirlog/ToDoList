@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <div id="myTitle" class="header">
+        <h2 class = "bg-danger text-center">My To Do List</h2>
+    </div>
+    
+</head>
+<body>
+    <div class = "input-group">
+    <input type="text" id="myInput" placeholder="Task..." >
+    <input type = "date" id = "myDate" placeholder = "Select date">
+    <input type = "number" id = "numberOfTask" placeholder= "Select position">
+    <input type= "button" class="btn btn-md btn-info px-3" id= "btnAdd" onclick="newTask()" value = "Add">
+
+    <table id = "myTable" class = "table table-bordered">
+        <tr id = "tableRow">
+        </tr>
+    </table>
+
+    <input type = "number"  id="rowDelete" placeholder = "Delete a row">
+
+    <button class="btn btn-md btn-danger px-3" id = "delete" onclick="Delete()">Delete a task</button>
+    </div>
+    
+    <!--Look for a task, pressing enter key-->
+    <br>
+
+    <input type = "text" id="taskSearch" placeholder="Search for a task">
+    <button class="btn btn-md btn-danger px-3" id = "searchButton" onclick="">Search</button>
+
+    <script src = toDoList.js></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
