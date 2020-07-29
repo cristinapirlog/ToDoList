@@ -19,7 +19,7 @@
     <input type= "button" class="btn btn-md btn-info px-3" id= "btnAdd" onclick="newTask()" value = "Add">
 
     <table id = "myTable" class = "table table-bordered">
-        <tr>
+        <tr id = "tableRow">
         </tr>
     </table>
 
@@ -30,6 +30,14 @@
     <br>
     <div>Total number of available tasks is: </div>
     <div id = "totalNumberOfTasks"> </div>
+    </div>
+    
+    <!--Look for a task, pressing enter key-->
+    <br>
+
+    <input type = "text" id="taskSearch" placeholder="Search for a task">
+    <button class="btn btn-md btn-danger px-3" id = "searchButton" onclick="">Search</button>
+
     <script src = toDoList.js></script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
