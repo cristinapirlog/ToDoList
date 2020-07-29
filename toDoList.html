@@ -5,33 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <div id="myTitle" class="header">
+  <!--  <div id="myTitle" class="header">
         <h2 class = "bg-danger text-center">My To Do List</h2>
-    </div>
+    </div> -->
     
 </head>
 <body>
-    <div class = "input-group">
-    <input type="text" id="myInput" placeholder="Task..." >
-    <input type = "date" id = "myDate" placeholder = "Select date">
-    <input type = "number" id = "numberOfTask" placeholder= "Select position">
-    <input type= "button" class="btn btn-md btn-info px-3" id= "btnAdd" onclick="newTask()" value = "Add">
-
-    <table id = "myTable" class = "table table-bordered">
-        <tr id = "tableRow">
-        </tr>
-    </table>
-
-    <input type = "number"  id="rowDelete" placeholder = "Delete a row">
-
-    <button class="btn btn-md btn-danger px-3" id = "delete" onclick="Delete()">Delete a task</button>
+<div class="row">
+    <div class="col-md-6">
+    <div class="card">
+        <img class="card-img-top" src="Forget.jpg" alt="woman being forgetful">
+        <div class="card-body">
+          <h5 class="card-title">To Do List</h5>
+          <p class="card-text">Forgetting things is quite human.(...it's also shameful. Like a <strong>heavy</strong> carbon footprint.)</p>
+        </div>
+        <div class="card-body">
+            <div class = "input-group">
+                <input type="text" id="myInput" placeholder="Task..." >
+                <input type = "date" id = "myDate" placeholder = "Select date">
+                <input type = "number" id = "numberOfTask" placeholder= "Select position">
+                <input type= "button" class="btn btn-md btn-info px-3" id= "btnAdd" onclick="newTask()" value = "Add">
+            </div>
+        </div>    
+        <div class="card-body">
+            <table id = "myTable" class = "table table-bordered">
+                <tr id = "tableRow"></tr>
+            </table>
+        </div>
+        <div class="card-body">
+            <label name="rowDelete" id="rowDelete">Select the task to delete</label>
+            <br>
+            <input type = "number" name="rowDelete" id="rowDelete" placeholder = "Delete a row">
+        <!--    <button class="btn btn-md btn-danger px-3" id = "delete" onclick="Delete()">Delete a task</button> -->
+        </div>
+        <div class="card-body">
+            <div>Total number of available tasks is: </div>
+            <div id = "totalNumberOfTasks"></div>
+        </div>
+        
+        <div class="card-body">
+            <input type = "text" id="taskSearch" placeholder="Search for a task">
+        <!--    <button class="btn btn-md btn-info px-3" id = "searchButton" onclick="">Search</button> -->
+        </div>
+        <div class="card-body">
+            <button class="btn btn-md btn-info px-3" id = "searchButton" onclick="">Search</button>
+            <button class="btn btn-md btn-danger px-3" id = "delete" onclick="Delete()">Delete a task</button>
+        </div>
     </div>
-    
-    <!--Look for a task, pressing enter key-->
-    <br>
+</div>
 
-    <input type = "text" id="taskSearch" placeholder="Search for a task">
-    <button class="btn btn-md btn-danger px-3" id = "searchButton" onclick="">Search</button>
+
 
     <script src = toDoList.js></script>
 
